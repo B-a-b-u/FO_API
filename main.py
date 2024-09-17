@@ -109,9 +109,9 @@ def preprocess_data(data):
 
     return data
 
-# @app.post("/")
-# async def home():
-#     return {"Message" : "As you can see I am not Dead"}
+@app.get("/")
+def home():
+    return {"Message" : "As you can see I am not Dead"}
 
 @app.post("/ferti-predict/")
 async def predict_fertilizer(file: UploadFile = File(...),
