@@ -159,6 +159,3 @@ async def predict_fertilizer(file: UploadFile = File(...),
     return JSONResponse(content={"Response": "Function completed", "Recommended_Fertilizer": fertilizer_map[max_index]})
 
 
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=8000)
